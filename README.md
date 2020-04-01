@@ -1,6 +1,6 @@
-#GoBarber - Aplicação Back-end Bootcamp Rocketseat
+#Iniciando Back-end GoBarber - Bootcamp Rocketseat
 
-# Nesse projeto vamos construir um API no backend utilizando NodeJS, Express, Postgres, Nodemon, Sucrase, entre outras libs.
+# Nesse projeto vamos construir uma API utilizando NodeJS, Express, Postgres, Nodemon, Sucrase, entre outras libs.
 
 - [x] Ambiente e conceitos
 
@@ -60,4 +60,25 @@
 
 * [x] Configuração ESLint (verifica se o código está seguindo os padrões de desenvolvimento), Prettier (deixa o código mais bonito) e EditorConfig (padroniza o código se outros editores estiverem utilizando ferramentas diferentes de desenvolvimento)
 
-- [ ] Configurando Sequelize
+- [x] Configurando Sequelize e estruturar as pastas
+
+  - Estruturação das pastas
+    No src foi criada uma pasta chamada config que ficará a maioria das configurações da aplicação. Inicialmente ficará a configuração do database.js.
+    Também foi criada a pasta database que armazenará todas as migrations.
+    A pasta app foi criada para armazenar a maioria dos códigos que envolvem regras de negócio (controllers e models).
+  - Configuração do Sequelize
+    yarn add sequelize
+    yarn add sequelize-cli -D (falicita nos comandos para executar as migrations)
+    Crio um arquivo chamado .sequilizerc
+
+- [x] Cadastro e autenticação de usuários
+  - [ ] Migration de usuário
+  - [ ] Model de usuário
+  - [ ] Criando loader de models
+  - [ ] Cadastro de usuário
+  - [ ] Gerando hash da senha
+  - [ ] Conceitos de JWT
+  - [ ] Autenticação JWT
+  - [ ]Middleware de autenticação
+  - [ ] Update do usuário
+  - [ ] Validando dados de entrada
