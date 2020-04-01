@@ -10,7 +10,7 @@
   - [x] Nodemon e Sucrase
         O Nodemon foi instalado com o objetivo de executar o servidor automaticamente a cada modificação realizada no código. Já o Sucrase foi instalado para utilizar o "import e export". Além do Sucrase pode ser utilizado o babel. Para adicioanr as duas dependência foi executado o comando yarn add sucrase nodemon -D.
 
-        Agora para excutar o meu arquivo serve.js é ncessário yarn sucrase-node src/server.js. Para configurar o Nodemon foi necessário inserir no arquivo package.json
+        Agora para executar o meu arquivo serve.js é necessário executar yarn sucrase-node src/server.js. Para configurar o Nodemon foi necessário inserir no arquivo package.json
           "scripts": { "dev": " nodemon/src/server.js"}
         agora se executar o comando yarn dev para rodar o servidor, irá dar erro porque não vai reconhecer as modificações feitas pelo sucrase. Então foi criado um arquivo nodemon.json  e inserido o código:
           {
@@ -18,7 +18,7 @@
               "js": "node -r sucrase/register"
             }
           }
-        Ou seja, para todo arquivo que termina com a extensão js eu quero que você rode o node, porém  vocẽ resgitra o sucrase.
+        Ou seja, para todo arquivo que termina com a extensão js eu quero que você rode o node, porém  você resgitra o sucrase.
         Agora no terminarl consigo executar o servidor com o comando yarn dev.
 
 * [x] Conceitos do Docker
@@ -40,7 +40,7 @@
   - Alguns comandos:
     docker ps = lista os container em execução
     docker stop name = para o container
-    docker ps -a = lista todos os container da maquina
+    docker ps -a = lista todos os container da máquina
     docker start nome = executa o container
     docker logs name = visualiza os logs do container
 
@@ -49,12 +49,13 @@
   - É um ORM que é uma forma de abstrair o banco de dados. Onde as tabelas do banco de dados viram Model.
   - Será utilizado apenas linguagem Javascript.
   - Será muito utilizada a funcionalidade de Migrations para controle de versão da base de dados.
-    - Os arquivos da Migrations pode conter instruções para criar, alterar e remover tabelas ou colunas. - - Ainda, mantém a base atualizada entre todos os desenvolvedores do time e no ambiente de produção. - Cada arquivo criado é uma Migratios e sua ordenação ocorre por data.
+    - Os arquivos da Migrations pode conter instruções para criar, alterar e remover tabelas ou colunas.
+    - Ainda, mantém a base atualizada entre todos os desenvolvedores do time e no ambiente de produção. - Cada arquivo criado é uma Migrations e sua ordenação ocorre por data.
     - A Migrations pode ser deletada a qualquer momento se errarmos algo enquanto estivermos desenvolvendo a feature.
     - Cada Migrations deve realizar alterações em apenas uma tabela.
     - Depois que a Migrations foi compartilhada ela não poderá ser alterada, assim uma nova deverá ser criada.
-  - Arquitetura MVC consiste basicamente na forma da gente estruturar os arquivos da nossa aplicação, com objetivo de separar as responsabilidades de caa tipo de arquivo.
-    - Model armazena a abstração do banco, utilizado para manipular os dados contdos nas tabelas do banco. Não possuem responsabilidade sobre a regra de negócio da aplicação.
+  - Arquitetura MVC consiste basicamente na forma de estruturar os arquivos da nossa aplicação, com objetivo de separar as responsabilidades de cada tipo de arquivo.
+    - Model armazena a abstração do banco, utilizado para manipular os dados contidos nas tabelas do banco. Não possuem responsabilidade sobre a regra de negócio da aplicação.
     - Controller é o ponto de entrada das requisições da nossa aplicação.
     - View é o retorno ao cliente.
 
