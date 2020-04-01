@@ -44,6 +44,20 @@
     docker start nome = executa o container
     docker logs name = visualiza os logs do container
 
-- [ ] Sequelize e MVC
-- [ ] ESLint, Prettier e EditorCOnfig
+* [x] Sequelize e MVC
+
+  - É um ORM que é uma forma de abstrair o banco de dados. Onde as tabelas do banco de dados viram Model.
+  - Será utilizado apenas linguagem Javascript.
+  - Será muito utilizada a funcionalidade de Migrations para controle de versão da base de dados.
+    - Os arquivos da Migrations pode conter instruções para criar, alterar e remover tabelas ou colunas. - - Ainda, mantém a base atualizada entre todos os desenvolvedores do time e no ambiente de produção. - Cada arquivo criado é uma Migratios e sua ordenação ocorre por data.
+    - A Migrations pode ser deletada a qualquer momento se errarmos algo enquanto estivermos desenvolvendo a feature.
+    - Cada Migrations deve realizar alterações em apenas uma tabela.
+    - Depois que a Migrations foi compartilhada ela não poderá ser alterada, assim uma nova deverá ser criada.
+  - Arquitetura MVC consiste basicamente na forma da gente estruturar os arquivos da nossa aplicação, com objetivo de separar as responsabilidades de caa tipo de arquivo.
+    - Model armazena a abstração do banco, utilizado para manipular os dados contdos nas tabelas do banco. Não possuem responsabilidade sobre a regra de negócio da aplicação.
+    - Controller é o ponto de entrada das requisições da nossa aplicação.
+    - View é o retorno ao cliente.
+
+* [x] Configuração ESLint (verifica se o código está seguindo os padrões de desenvolvimento), Prettier (deixa o código mais bonito) e EditorConfig (padroniza o código se outros editores estiverem utilizando ferramentas diferentes de desenvolvimento)
+
 - [ ] Configurando Sequelize
