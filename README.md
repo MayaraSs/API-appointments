@@ -1,11 +1,12 @@
 #Iniciando Back-end GoBarber - Bootcamp Rocketseat
+#Aplicação de agendamento de serviços de beleza
 
 # Nesse projeto vamos construir uma API utilizando NodeJS, Express, Postgres, Nodemon, Sucrase, entre outras libs.
 
 - [x] Ambiente e conceitos
 
   - [x] Configurando a estrutura
-        O back-end será estruturado com Classes. Para iniciar o projeto com node, foi iniciado o yarn com o comando yarn init -y para criar o arquivo package.json. Em seguida, foi adicionada a dependência express yarn add express. Em seguida,foi criada uma pasta chamada src para adicionar todos os códigos da aplicação que será manipulado diariamente. E criado os seguintes arquivos App.js (configuração do servidor), server.js (inicialização do servidor) e routes.js (todas as rotas).
+        O back-end será estruturado com Classes. Para iniciar o projeto com node, foi iniciado o yarn com o comando yarn init -y para criar o arquivo package.json. Em seguida, foi adicionada a dependência express yarn add express. Foi criada uma pasta chamada src para adicionar todos os códigos da aplicação que será manipulado diariamente. E criado os seguintes arquivos App.js (configuração do servidor), server.js (inicialização do servidor) e routes.js (todas as rotas).
 
   - [x] Nodemon e Sucrase
         O Nodemon foi instalado com o objetivo de executar o servidor automaticamente a cada modificação realizada no código. Já o Sucrase foi instalado para utilizar o "import e export". Além do Sucrase pode ser utilizado o babel. Para adicioanr as duas dependência foi executado o comando yarn add sucrase nodemon -D.
@@ -38,11 +39,11 @@
   - Com o comando docker ps verifico se aparecem as informações sobre o Docker. Se aparecer o Docker está rodando. Para verificar se está funcionando eu instalo uma interface chamada Postbird para visualizar os dados do Postgres.
   - Como o Postbird já estava instalado na minha máquina apenas abri a interface para realizar a conexão. Na interface consegue-se selecionar o banco de dados que deseja utilizar e criar a database.
   - Alguns comandos:
-    docker ps = lista os container em execução
-    docker stop name = para o container
-    docker ps -a = lista todos os container da máquina
-    docker start nome = executa o container
-    docker logs name = visualiza os logs do container
+    - docker ps = lista os container em execução
+    - docker stop name = para o container
+    - docker ps -a = lista todos os container da máquina
+    - docker start nome = executa o container
+    - docker logs name = visualiza os logs do container
 
 * [x] Sequelize e MVC
 
@@ -59,9 +60,9 @@
     - Controller é o ponto de entrada das requisições da nossa aplicação.
     - View é o retorno ao cliente.
 
-* [x] Configuração ESLint (verifica se o código está seguindo os padrões de desenvolvimento), Prettier (deixa o código mais bonito) e EditorConfig (padroniza o código se outros editores estiverem utilizando ferramentas diferentes de desenvolvimento)
+- [x] Configuração ESLint (verifica se o código está seguindo os padrões de desenvolvimento), Prettier (deixa o código mais bonito) e EditorConfig (padroniza o código se outros editores estiverem utilizando ferramentas diferentes de desenvolvimento)
 
-- [x] Configurando Sequelize e estruturar as pastas
+- [x] Configuração Sequelize e estruturação das pastas
 
   - Estruturação das pastas
     No src foi criada uma pasta chamada config que ficará a maioria das configurações da aplicação. Inicialmente ficará a configuração do database.js.
@@ -72,14 +73,17 @@
     yarn add sequelize-cli -D (falicita nos comandos para executar as migrations)
     Crio um arquivo chamado .sequilizerc
 
-- [x] Cadastro e autenticação de usuários
-  - [ ] Migration de usuário
+* [x] Cadastro e autenticação de usuários
+
+  - [x] Migration de usuário
+        Para criar a tabela de usuário foi utilizado o comando yarn sequelize migration:create --name=create-users. Agora na pasta migrations já vai aparecer o arquivo e agora posso definir os campos da tabela.
+
   - [ ] Model de usuário
   - [ ] Criando loader de models
   - [ ] Cadastro de usuário
   - [ ] Gerando hash da senha
   - [ ] Conceitos de JWT
   - [ ] Autenticação JWT
-  - [ ]Middleware de autenticação
+  - [ ] Middleware de autenticação
   - [ ] Update do usuário
   - [ ] Validando dados de entrada
