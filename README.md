@@ -79,7 +79,7 @@
         Para criar a tabela de usuário foi utilizado o comando yarn sequelize migration:create --name=create-users. Agora na pasta migrations já vai aparecer o arquivo e agora posso definir os campos da tabela.
 
   - [x] Model de usuário
-        Foi criado o arquivo User.js e inserida as informações que será ncessário o usuário possuir (name, email, password e provider).
+        Foi criado o arquivo User.js e inserida as informações que será necessário o usuário preencher para cadastrar no sistema (name, email, password e provider).
 
   - [x] Criando loader de models
 
@@ -87,9 +87,11 @@
         Cria o UserController que terá todas as informaçõs para o cadastro do usuário.
 
   - [x] Gerando hash da senha
-        Será gerado o hash da senha do usuário. Atualmente o usuário está sendo cadastrado passando o password_hash com alguns número. Agora iremos fazer com que o usuário envie apenas password com a senha dele e a gente gere esse password_hash que é a coluna do banco através de um hash gerado a partir da senha que ele incluiu.
+        Será gerado o hash da senha do usuário. Atualmente o usuário está sendo cadastrado passando o password_hash com alguns número. Agora iremos fazer com que o usuário envie apenas password com a senha dele e a gente gere esse password_hash que é a coluna do banco através de um hash gerado a partir da senha que ele incluiu. Para gerar o hash da senha será utilizada a extensão yarn add bcryptjs. No arquivo User.js e importado o bcryptjs e criado um campo password: Sequelize.VIRTUAL indicando que esse campo nunca irá existir na base de dados.
 
-  - [ ] Conceitos de JWT
+  - [x] Conceitos de JWT
+        é uma metodologia de fazer autenticação em API REST que são serviços que a gente cria que são comunicados através de json. É feita uma autenticação que vai para a base de dados e gera um Token JWT, a primeira parte do Toker refere-se ao Headers (tipo de Token, algoritmo), a segunda a Payload (dados adicionais) e a Asinatura do Token (garante que o Token não foi modificado por outro usuário).
+
   - [ ] Autenticação JWT
   - [ ] Middleware de autenticação
   - [ ] Update do usuário
