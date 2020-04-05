@@ -79,10 +79,16 @@
         Para criar a tabela de usuário foi utilizado o comando yarn sequelize migration:create --name=create-users. Agora na pasta migrations já vai aparecer o arquivo e agora posso definir os campos da tabela.
 
   - [x] Model de usuário
-  - [x] Criando loader de models
-  - [x] Cadastro de usuário
+        Foi criado o arquivo User.js e inserida as informações que será ncessário o usuário possuir (name, email, password e provider).
 
-  - [ ] Gerando hash da senha
+  - [x] Criando loader de models
+
+  - [x] Cadastro de usuário
+        Cria o UserController que terá todas as informaçõs para o cadastro do usuário.
+
+  - [x] Gerando hash da senha
+        Será gerado o hash da senha do usuário. Atualmente o usuário está sendo cadastrado passando o password_hash com alguns número. Agora iremos fazer com que o usuário envie apenas password com a senha dele e a gente gere esse password_hash que é a coluna do banco através de um hash gerado a partir da senha que ele incluiu.
+
   - [ ] Conceitos de JWT
   - [ ] Autenticação JWT
   - [ ] Middleware de autenticação
