@@ -78,9 +78,10 @@
   - [x] Migration de usuário
         Para criar a tabela de usuário foi utilizado o comando yarn sequelize migration:create --name=create-users. Agora na pasta migrations já vai aparecer o arquivo e agora posso definir os campos da tabela.
 
-  - [ ] Model de usuário
-  - [ ] Criando loader de models
-  - [ ] Cadastro de usuário
+  - [x] Model de usuário
+  - [x] Criando loader de models
+  - [x] Cadastro de usuário
+
   - [ ] Gerando hash da senha
   - [ ] Conceitos de JWT
   - [ ] Autenticação JWT
