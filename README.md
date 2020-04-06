@@ -101,3 +101,15 @@
 - [x] Update do usuário
 
 - [x] Validando dados de entrada
+
+#CONTINUANDO API DO GoBARBER
+
+-[ ] Envio de arquivos -[ ] Configurar Multer -[ ] Avatar do usuário
+
+-[ ] Funcionalidades de agendamentos -[ ] Listagem de prestadores de serviço -[ ] Migration model de agendamento -[ ] Agendamento de serviço -[ ] Validações de agendamento -[ ] Listando agendamentos do usuário -[ ] Aplicando paginação -[ ] Listando agenda do prestador
+
+-[ ] Envio de notificações -[ ] Configurando MongoDB -[ ] Notificando novos agendamentos -[ ]Listando notificações do usuário -[ ] Marcar notificações como lidas
+
+-[ ] Cancelamento e envio de e-mail -[ ] Cancelamento de agendamento -[ ] Configurando Nodemailer -[ ] Configurando templates de e-mail -[ ] Configurando fila com Redis -[ ] Monitorando falhas na fila -[ ] Listando hoários disponíveis -[ ] Campos virtuais no agendamento
+
+-[ ] Configurações avançadas -[ ] Tratamento de exceções -[ ] ariáveis ambiente
