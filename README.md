@@ -95,6 +95,9 @@
   - [x] Autenticação JWT
         Primeiro foi criado o arquivo SessionController.js e instalada a extensão yarn add jsonwebtoken que irá gerar o token.
 
-- [ ] Middleware de autenticação
-- [ ] Update do usuário
-- [ ] Validando dados de entrada
+- [x] Middleware de autenticação
+      Será bloqueado o acesso do usuário a algumas rotas se ele não estiver logado no sistema.
+
+- [x] Update do usuário
+
+- [x] Validando dados de entrada
