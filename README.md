@@ -11,16 +11,16 @@
   - [x] Nodemon e Sucrase
         O Nodemon foi instalado com o objetivo de executar o servidor automaticamente a cada modificação realizada no código. Já o Sucrase foi instalado para utilizar o "import e export". Além do Sucrase pode ser utilizado o babel. Para adicioanr as duas dependência foi executado o comando yarn add sucrase nodemon -D.
 
-        Agora para executar o meu arquivo serve.js é necessário executar yarn sucrase-node src/server.js. Para configurar o Nodemon foi necessário inserir no arquivo package.json
-          "scripts": { "dev": " nodemon/src/server.js"}
-        agora se executar o comando yarn dev para rodar o servidor, irá dar erro porque não vai reconhecer as modificações feitas pelo sucrase. Então foi criado um arquivo nodemon.json  e inserido o código:
-          {
-            "execMap":{
-              "js": "node -r sucrase/register"
-            }
-          }
-        Ou seja, para todo arquivo que termina com a extensão js eu quero que você rode o node, porém  você resgitra o sucrase.
-        Agora no terminarl consigo executar o servidor com o comando yarn dev.
+    Agora para executar o meu arquivo serve.js é necessário executar yarn sucrase-node src/server.js. Para configurar o Nodemon foi necessário inserir no arquivo package.json
+    "scripts": { "dev": " nodemon/src/server.js"}
+    agora se executar o comando yarn dev para rodar o servidor, irá dar erro porque não vai reconhecer as modificações feitas pelo sucrase. Então foi criado um arquivo nodemon.json e inserido o código:
+    {
+    "execMap":{
+    "js": "node -r sucrase/register"
+    }
+    }
+    Ou seja, para todo arquivo que termina com a extensão js eu quero que você rode o node, porém você resgitra o sucrase.
+    Agora no terminarl consigo executar o servidor com o comando yarn dev.
 
 * [x] Conceitos do Docker
 
@@ -50,15 +50,15 @@
   - É um ORM que é uma forma de abstrair o banco de dados. Onde as tabelas do banco de dados viram Model.
   - Será utilizado apenas linguagem Javascript.
   - Será muito utilizada a funcionalidade de Migrations para controle de versão da base de dados.
-    - Os arquivos da Migrations pode conter instruções para criar, alterar e remover tabelas ou colunas.
+  - Os arquivos da Migrations pode conter instruções para criar, alterar e remover tabelas ou colunas.
     - Ainda, mantém a base atualizada entre todos os desenvolvedores do time e no ambiente de produção. - Cada arquivo criado é uma Migrations e sua ordenação ocorre por data.
     - A Migrations pode ser deletada a qualquer momento se errarmos algo enquanto estivermos desenvolvendo a feature.
     - Cada Migrations deve realizar alterações em apenas uma tabela.
     - Depois que a Migrations foi compartilhada ela não poderá ser alterada, assim uma nova deverá ser criada.
   - Arquitetura MVC consiste basicamente na forma de estruturar os arquivos da nossa aplicação, com objetivo de separar as responsabilidades de cada tipo de arquivo.
-    - Model armazena a abstração do banco, utilizado para manipular os dados contidos nas tabelas do banco. Não possuem responsabilidade sobre a regra de negócio da aplicação.
-    - Controller é o ponto de entrada das requisições da nossa aplicação.
-    - View é o retorno ao cliente.
+  - Model armazena a abstração do banco, utilizado para manipular os dados contidos nas tabelas do banco. Não possuem responsabilidade sobre a regra de negócio da aplicação.
+  - Controller é o ponto de entrada das requisições da nossa aplicação.
+  - View é o retorno ao cliente.
 
 - [x] Configuração ESLint (verifica se o código está seguindo os padrões de desenvolvimento), Prettier (deixa o código mais bonito) e EditorConfig (padroniza o código se outros editores estiverem utilizando ferramentas diferentes de desenvolvimento)
 
@@ -92,7 +92,9 @@
   - [x] Conceitos de JWT
         é uma metodologia de fazer autenticação em API REST que são serviços que a gente cria que são comunicados através de json. É feita uma autenticação que vai para a base de dados e gera um Token JWT, a primeira parte do Toker refere-se ao Headers (tipo de Token, algoritmo), a segunda a Payload (dados adicionais) e a Asinatura do Token (garante que o Token não foi modificado por outro usuário).
 
-  - [ ] Autenticação JWT
-  - [ ] Middleware de autenticação
-  - [ ] Update do usuário
-  - [ ] Validando dados de entrada
+  - [x] Autenticação JWT
+        Primeiro foi criado o arquivo SessionController.js e instalada a extensão yarn add jsonwebtoken que irá gerar o token.
+
+- [ ] Middleware de autenticação
+- [ ] Update do usuário
+- [ ] Validando dados de entrada
