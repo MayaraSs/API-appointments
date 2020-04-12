@@ -105,15 +105,61 @@
 # Continuando API do GoBarber
 
 - [x] Envio de arquivos
+
   - [x] Configurar Multer
-        Realizar Upload de arquivos isolados. Será utilizado, pois o usuário que for prestador de serviço vai ter um avatar. Na hora que o usuário seleciona a imagem, essa imagem já é enviada para o servidor e o servidor retorna um id da imagem. Servidor retorna para o front-end o id da imagem. Para isso foi instalado a biblioteca multer porque o json não suporta envio de upload de arquivos, 
+        Realizar Upload de arquivos isolados. Será utilizado, pois o usuário que for prestador de serviço vai ter um avatar. Na hora que o usuário seleciona a imagem, essa imagem já é enviada para o servidor e o servidor retorna um id da imagem. Servidor retorna para o front-end o id da imagem. Para isso foi instalado a biblioteca multer porque o json não suporta envio de upload de arquivos, yarn add multer.
+        Cria a pasta tmp e uploads onde vai ser armazenado todos os uploads realizados. E naa pasta src/config cria a pasta multer onde será implementado a configuração para realizar os uploads.
+          
+         import multer from 'multer';
+        import crypto from 'crypto';
+        import { extname, resolve } from 'path'; //retorna a extensão do arquivo
 
--[ ] Avatar do usuário
+          //objeto de configuração
+          export default {
+            //A primeira chave refere-se a como o arquivo vai guardar os arquivos de imagem
+            storage: multer.diskStorage({
+              destination: resolve(__dirname, '..', '..', 'tmp', 'uploads'),
+              filename: (req, file, cb) => {
+                crypto.randomBytes(16, (err, res) =>{
+                  if (err) return cb (err);
 
--[ ] Funcionalidades de agendamentos -[ ] Listagem de prestadores de serviço -[ ] Migration model de agendamento -[ ] Agendamento de serviço -[ ] Validações de agendamento -[ ] Listando agendamentos do usuário -[ ] Aplicando paginação -[ ] Listando agenda do prestador
+                  return cb(null, res.toString('hex') + extname(file.originalname) );
+                })
 
--[ ] Envio de notificações -[ ] Configurando MongoDB -[ ] Notificando novos agendamentos -[ ]Listando notificações do usuário -[ ] Marcar notificações como lidas
+              },
+            }),
+          };
 
--[ ] Cancelamento e envio de e-mail -[ ] Cancelamento de agendamento -[ ] Configurando Nodemailer -[ ] Configurando templates de e-mail -[ ] Configurando fila com Redis -[ ] Monitorando falhas na fila -[ ] Listando hoários disponíveis -[ ] Campos virtuais no agendamento
+-[x] Avatar do usuário
+Será as informações dos arquivos recebidos do uploads na base de dados. Crio um arquivo FileController.js . Crio uma tabela files no banco de dados com o comando yarn sequelize migration:create --name=create-files. Crio o model File.js. A nossa tabela de usuário ainda não tem um relacionamento para essa tabela de arquivos, ou seja a tabela de usuários não possui um campo para conseguir recuperar a informação do arquivo ou associar um usuário com algum arquivo para ser o avatar dele. Então, será adicionado um campo novo na tabela do user. Para adicionar um campo novo na tabela user precisa criar uma nova migrations apenas para inserir o campo novo da tabela. As migrations funcionam como uma linha do tempo da nossa database, a partir do momento que ela foi criada é aconselhavĺ criar uma nova migrations para as alterações que deseja realizar.
 
--[ ] Configurações avançadas -[ ] Tratamento de exceções -[ ] ariáveis ambiente
+- [ ] Funcionalidades de agendamentos
+
+  - [ ] Listagem de prestadores de serviço
+  - [ ] Migration model de agendamento
+  - [ ] Agendamento de serviço
+  - [ ] Validações de agendamento
+  - [ ] Listando agendamentos do usuário
+  - [ ] Aplicando paginação
+  - [ ] Listando agenda do prestador
+
+- [ ] Envio de notificações
+
+  - [ ] Configurando MongoDB
+  - [ ] Notificando novos agendamentos
+  - [ ]Listando notificações do usuário
+  - [ ] Marcar notificações como lidas
+
+- [ ] Cancelamento e envio de e-mail
+
+  - [ ] Cancelamento de agendamento
+  - [ ] Configurando Nodemailer
+  - [ ] Configurando templates de e-mail
+  - [ ] Configurando fila com Redis
+  - [ ] Monitorando falhas na fila
+  - [ ] Listando hoários disponíveis
+  - [ ] Campos virtuais no agendamento
+
+- [ ] Configurações avançadas
+  - [ ] Tratamento de exceções
+  - [ ] ariáveis ambiente
