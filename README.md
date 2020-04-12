@@ -102,9 +102,13 @@
 
 - [x] Validando dados de entrada
 
-#CONTINUANDO API DO GoBARBER
+# Continuando API do GoBarber
 
--[ ] Envio de arquivos -[ ] Configurar Multer -[ ] Avatar do usuário
+- [x] Envio de arquivos
+  - [x] Configurar Multer
+        Realizar Upload de arquivos isolados. Será utilizado, pois o usuário que for prestador de serviço vai ter um avatar. Na hora que o usuário seleciona a imagem, essa imagem já é enviada para o servidor e o servidor retorna um id da imagem. Servidor retorna para o front-end o id da imagem. Para isso foi instalado a biblioteca multer porque o json não suporta envio de upload de arquivos, 
+
+-[ ] Avatar do usuário
 
 -[ ] Funcionalidades de agendamentos -[ ] Listagem de prestadores de serviço -[ ] Migration model de agendamento -[ ] Agendamento de serviço -[ ] Validações de agendamento -[ ] Listando agendamentos do usuário -[ ] Aplicando paginação -[ ] Listando agenda do prestador
 
