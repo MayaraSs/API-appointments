@@ -139,7 +139,8 @@
         Crio um arquivo ProviderController, onde vou implementar as condicionais da listagem de todos os prestadores de serviços.
   - [x] Migration model de agendamento
         Será criada o model e a migation de agendamento, então toda vez que o usuário marcar algum agendamento com os prestadores ele irá gerar um registro na tabela do banco de dados.
-        Primeiro será usado o sequelize para criar uma migrations { yarn sequelize migrations:create --name=create-appointments}
+        Primeiro será usado o sequelize para criar uma migrations { yarn sequelize migrations:create --name=create-appointments}.
+        É criado o arquivo do model Appointment.js
   - [ ] Agendamento de serviço
   - [ ] Validações de agendamento
   - [ ] Listando agendamentos do usuário
