@@ -130,13 +130,16 @@
             }),
           };
 
--[x] Avatar do usuário
-Será as informações dos arquivos recebidos do uploads na base de dados. Crio um arquivo FileController.js . Crio uma tabela files no banco de dados com o comando yarn sequelize migration:create --name=create-files. Crio o model File.js. A nossa tabela de usuário ainda não tem um relacionamento para essa tabela de arquivos, ou seja a tabela de usuários não possui um campo para conseguir recuperar a informação do arquivo ou associar um usuário com algum arquivo para ser o avatar dele. Então, será adicionado um campo novo na tabela do user. Para adicionar um campo novo na tabela user precisa criar uma nova migrations apenas para inserir o campo novo da tabela. As migrations funcionam como uma linha do tempo da nossa database, a partir do momento que ela foi criada é aconselhavĺ criar uma nova migrations para as alterações que deseja realizar.
+  - [x] Avatar do usuário
+        Será as informações dos arquivos recebidos do uploads na base de dados. Crio um arquivo FileController.js . Crio uma tabela files no banco de dados com o comando yarn sequelize migration:create --name=create-files. Crio o model File.js. A nossa tabela de usuário ainda não tem um relacionamento para essa tabela de arquivos, ou seja a tabela de usuários não possui um campo para conseguir recuperar a informação do arquivo ou associar um usuário com algum arquivo para ser o avatar dele. Então, será adicionado um campo novo na tabela do user. Para adicionar um campo novo na tabela user precisa criar uma nova migrations apenas para inserir o campo novo da tabela. As migrations funcionam como uma linha do tempo da nossa database, a partir do momento que ela foi criada é aconselhavĺ criar uma nova migrations para as alterações que deseja realizar.
 
-- [ ] Funcionalidades de agendamentos
+- [x] Funcionalidades de agendamentos
 
-  - [ ] Listagem de prestadores de serviço
-  - [ ] Migration model de agendamento
+  - [x] Listagem de prestadores de serviço
+        Crio um arquivo ProviderController, onde vou implementar as condicionais da listagem de todos os prestadores de serviços.
+  - [x] Migration model de agendamento
+        Será criada o model e a migation de agendamento, então toda vez que o usuário marcar algum agendamento com os prestadores ele irá gerar um registro na tabela do banco de dados.
+        Primeiro será usado o sequelize para criar uma migrations { yarn sequelize migrations:create --name=create-appointments}
   - [ ] Agendamento de serviço
   - [ ] Validações de agendamento
   - [ ] Listando agendamentos do usuário
