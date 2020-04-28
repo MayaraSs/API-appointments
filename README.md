@@ -141,7 +141,8 @@
         Será criada o model e a migation de agendamento, então toda vez que o usuário marcar algum agendamento com os prestadores ele irá gerar um registro na tabela do banco de dados.
         Primeiro será usado o sequelize para criar uma migrations { yarn sequelize migrations:create --name=create-appointments}.
         É criado o arquivo do model Appointment.js
-  - [ ] Agendamento de serviço
+  - [x] Agendamento de serviço
+        Cria o AppointmentController.js.
   - [ ] Validações de agendamento
   - [ ] Listando agendamentos do usuário
   - [ ] Aplicando paginação
@@ -151,7 +152,7 @@
 
   - [ ] Configurando MongoDB
   - [ ] Notificando novos agendamentos
-  - [ ]Listando notificações do usuário
+  - [ ] Listando notificações do usuário
   - [ ] Marcar notificações como lidas
 
 - [ ] Cancelamento e envio de e-mail
