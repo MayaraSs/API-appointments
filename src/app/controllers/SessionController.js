@@ -6,7 +6,7 @@ import User from '../models/User';
 
 class SessionController {
   async store(req, res) {
-    const schema = yup.object().shape({
+    const schema = Yup.object().shape({
       email: Yup.string().email().required(),
       password: Yup.string().required(),
     });
@@ -33,7 +33,7 @@ class SessionController {
         name,
         email,
       },
-      token: jwt.sign({ id }, authConfig, {
+      token: jwt.sign({ id }, authConfig.secret, {
         expiresIn: authConfig.expiresIn,
       }),
     });
